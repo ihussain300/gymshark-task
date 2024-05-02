@@ -6,8 +6,8 @@ Feature: Remove from Bag
     Then the product should not appear in the Bag
 
   @manual
-  Scenario: Sub total is updated once a product is removed from the Bag
-    Given multiple products have been added to the Bag
-    And the sub total displayed is correct
-    When a product is removed from the Bag
-    Then the sub total is also updated to reflect only the products remaining in the Bag
+  Scenario: Removing multiple products from the Bag and asserting the sub total is updated
+    Given there are multiple products in the Bag
+    When the user removes a couple of products
+    Then the products selected for removal are no longer in the Bag
+    And the sub total reflects only the products remaining in the Bag
