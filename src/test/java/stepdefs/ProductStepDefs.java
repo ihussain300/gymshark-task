@@ -66,11 +66,7 @@ public class ProductStepDefs {
   public void removingProductFromTheBag() {
     BagPage bagPage = new BagPage();
     bagPage.removeProduct(product2Id);
-    try {
-      Thread.sleep(15000); // Pause for 15 seconds (specified in milliseconds)
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+    bagPage.waitForAndGetRemovalPopup();
   }
 
   @Then("the product should not appear in the Bag")
