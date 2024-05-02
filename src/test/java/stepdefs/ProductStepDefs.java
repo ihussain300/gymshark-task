@@ -62,7 +62,7 @@ public class ProductStepDefs {
     assertThat(variantIds).as("Expected product is in Bag").contains(productId, product2Id);
   }
 
-  @When("a product is removed from the Bag")
+  @When("removing a product from the Bag")
   public void removingProductFromTheBag() {
     BagPage bagPage = new BagPage();
     bagPage.removeProduct(product2Id);
