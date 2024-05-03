@@ -11,3 +11,9 @@ Feature: Remove from Bag
     When removing multiple products from the Bag
     Then the products selected for removal are no longer in the Bag
     And the sub total reflects only the products remaining in the Bag
+
+  @manual
+  Scenario: Empty Bag when no product in Bag
+    Given there is a single product in the Bag
+    When the product is removed
+    Then the Bag will be empty
